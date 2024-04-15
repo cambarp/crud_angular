@@ -1,0 +1,63 @@
+<div>
+  <div class="form_angular">
+    <form
+      class="formulario"
+      [formGroup]="formu"
+      (ngSubmit)="enviar()"
+      #mifor="ngForm"
+    >
+      <div>
+        <label for="nombre">Nombre :</label>
+        <input
+          id="nombre"
+          formControlName="Name"
+          type="text"
+          placeholder="Nombre"
+        />
+      </div>
+
+      <div>
+        <label for="apellido">Apellido</label>
+        <input
+          id="apellido"
+          formControlName="Apellido"
+          type="text"
+          placeholder="Apellidos"
+        />
+      </div>
+
+      <div>
+        <label for="correo">Correo</label>
+        <input
+          id="correo"
+          formControlName="Correo"
+          type="email"
+          placeholder="Correo"
+        />
+      </div>
+
+      <div>
+        <label for="Contraseña">Contraseña</label>
+        <input
+          type="password"
+          formControlName="Password"
+          id="Contraseña"
+          placeholder="Contraseña"
+        />
+        <div *ngIf="formu.get('Password')?.errors?.['minLeight']">
+          la contraseña debe de llevar almenos 6 caracteres
+        </div>
+      </div>
+
+      <button class="enviar_info" type="submit" [disabled]="formu.invalid">
+        enviar
+      </button>
+      <div class="mensaje" *ngIf="mensaje">
+        {{ mensaje }}
+      </div>
+    </form>
+  </div>
+  <div class="read">
+    <app-read></app-read>
+  </div>
+</div>

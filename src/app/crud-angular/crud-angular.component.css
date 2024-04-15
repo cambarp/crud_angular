@@ -1,0 +1,77 @@
+.form_angular {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  width: 25vw;
+  background: linear-gradient(135deg, #85e37b, #8e44ad);
+  background: -webkit-linear-gradient(135deg, #3498db, #37cd2f);
+  background: -moz-linear-gradient(135deg, #3498db, #8e44ad);
+  background: -o-linear-gradient(135deg, #3498db, #8e44ad);
+  background: -ms-linear-gradient(135deg, #3498db, #8e44ad);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 0.4vw;
+  width: 80%;
+  margin-bottom: 0.2vw;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.enviar_info {
+  background-color: #2ee477;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enviar_info:hover {
+  background-color: #0062cc;
+}
+
+.mensaje {
+  font-weight: bold;
+  color: green;
+  margin-top: 1rem;
+}
+
+.formulario div {
+  margin-bottom: 1rem;
+}
+
+.formulario div:last-child {
+  margin-bottom: 0;
+}
+
+.formulario .ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.formulario .ng-valid {
+  border-color: green;
+}

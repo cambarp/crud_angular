@@ -1,0 +1,49 @@
+.formulario_update {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form_udpate {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_udpate label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form_udpate input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form_udpate button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form_udpate button:hover {
+  background-color: #45a049;
+}
+
+.form_udpate button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

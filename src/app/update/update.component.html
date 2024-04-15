@@ -1,0 +1,13 @@
+<div class="formulario_update">
+    <form  class="form_udpate" [formGroup]="form_update">
+        <label for="">Nombre</label>
+        <input type="text" formControlName="nombre" class="nombre" [attr.placeholder]="user_s?.Name" required> 
+        <label for="">Apellido</label>
+        <input type="text" formControlName="apellido" class="apellido" value="Apellido" required>
+        <label for="">Correo</label>
+        <input type="email" formControlName="correo" class="correo" required>
+        <label for="">Contrasena</label>
+        <input type="password" formControlName="contrasena" class="contrasena">
+        <button class="actualizar"   (click)="onSubmit()">Actualizar</button>
+      </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="read" >
+  <form>
+    <label for="name">Nombre:</label>
+    <input id="name" [(ngModel)]="name" name="name" type="text" />
+    <button (click)="buscar_usuario()">Buscar usuario</button>
+  </form>
+
+  <div *ngIf="usuario_sele">
+    <h2>Datos del usuario:</h2>
+    <p>Nombre: {{ usuario_sele.Name }}</p>
+    <p>Apellido: {{ usuario_sele.Apellido }}</p>
+    <p>Correo: {{ usuario_sele.Correo }}</p>
+    <p>Contraseña: {{ usuario_sele.Password }}</p>
+    <button (click)="eliminar_user()">Eliminar</button>
+    <button (click)="update_user()">Actualizar</button>
+    
+  </div>
+  <ng-container [ngSwitch]="mostrar_update">
+    <app-update *ngSwitchCase="true"></app-update>
+  </ng-container>
+</div>
